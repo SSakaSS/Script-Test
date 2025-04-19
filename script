@@ -1,0 +1,39 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Raynner Hub", "DarkTheme")
+--Main
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("The Deeps of Reality")
+
+
+MainSection:NewButton("Infinite Yield", "Normalmente usado em TDR", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+
+local BloxFruits = Window:NewTab("Blox Fruits")
+local BloxFruitsSection = BloxFruits:NewSection("Blox Fruits")
+
+BloxFruitsSection:NewButton("Redz", "Script usado no blox fruits", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
+end)
+
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player Info")
+
+PlayerSection:NewSlider("Speed", "Player Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("Jump", "Player Jump", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Read = Window:NewTab("Please Read")
+local ReadSection = Read:NewSection("Open Console and read")
+
+ReadSection:NewButton("Open console and read", "Open console", function()
+    Print("This script is not for you, if you are not Raynner or Silvio, you are not welcome here")
+end)
+
+local ReadSection = Read:NewSection("Made by Raynner")
