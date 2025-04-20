@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Raynner Hub", "Sentinel")
+local Window = Library.CreateLib("Raynner Hub", "DarkTheme")
 --Main
 
 local Main = Window:NewTab("Main")
@@ -30,10 +30,24 @@ PlayerSection:NewSlider("Jump", "Player Jump", 350, 50, function(s) -- 500 (MaxV
 end)
 
 local Read = Window:NewTab("Please Read")
-local ReadSection = Read:NewSection("Open Console and read")
+local ReadSection = Read:NewSection("Only for Raynner and Silvio")
 
 ReadSection:NewButton("Open console and read", "Open console", function()
     Print("This script is not for you, if you are not Raynner or Silvio, you are not welcome here")
 end)
 
 local ReadSection = Read:NewSection("Made by Raynner")
+
+
+--dead realls
+
+local DeadRealls = Window:NewTab("Dead Realls")
+local DeadReallsSection = DeadRealls:NewSection("Dead Realls Script")  
+
+DeadReallsSection:NewButton("Jonas Script", "Script usado no Dead Realls", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JonasThePogi/DeadRails/refs/heads/main/newloadstring"))();
+end)
+
+DeadReallsSection:NewButton("ThaiBao", "Script usado no Dead Realls", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/refs/heads/main/TbaoHubDeadRails"))()
+end)
